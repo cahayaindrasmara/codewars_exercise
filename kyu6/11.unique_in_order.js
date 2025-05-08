@@ -16,4 +16,4 @@ function uniqueInOrder(iterable) {
     return listUnique;
 }
 
-console.log(uniqueInOrder('AAAABBBCCDAABBB'));
+console.log(uniqueInOrder('AAAABBBCCDAABBB')); //['A','B','C','D','A','B']

@@ -6,6 +6,9 @@ function findNextSquare(sq) {
     } else {
         return -1
     }
+
+    // kiss
+    //let result = square % 1 !== 0 ? -1 : (square + 1) ** 2
 }
 
 console.log(findNextSquare(121)); //144
