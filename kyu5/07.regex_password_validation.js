@@ -8,5 +8,7 @@ console.log(validPass("fDSJKHD23"))
 console.log(validPass("dsF43"))
 console.log(validPass("djI3_8D55"))
 console.log(validPass("djI38D55@@"))
+console.log(validPass("djI38D55@@"))
+
 
 
