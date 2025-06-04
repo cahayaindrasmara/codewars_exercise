@@ -11,6 +11,9 @@ function multiply(number) {
 
     count = number * Math.pow(5, increment)
     return count;
+
+    //kiss
+    //return number * Math.pow(5, Math.abs(number).toString().length);
 }
 
 console.log(multiply(200)) //2500
