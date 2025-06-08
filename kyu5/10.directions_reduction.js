@@ -1,5 +1,13 @@
 function dirReduc(arr) {
     // Stack untuk menyimpan arah yang valid
+    /*
+    Stack adalah struktur data dengan prinsip LIFO (Last In, First Out).
+    
+    Metode umum:
+    push(item) → Tambah elemen ke atas stack
+    pop() → Hapus elemen paling atas
+    stack[stack.length - 1] → Ambil elemen paling atas tanpa menghapus
+    */
     let stack = [];
 
     // Object untuk arah yang saling berlawanan
