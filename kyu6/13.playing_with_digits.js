@@ -1,29 +1,30 @@
 function digPow(n, p) {
     let digit = n.toString().split("").map(Number);
-    console.log("digit:", digit)
+    // console.log(digit);
 
-    let digitPow = 0;
-    let sumDigitPow = 0;
+    let numPow = [];
 
     for (let i = 0; i < digit.length; i++) {
-        digitPow = Math.pow(digit[i], p++);
-        console.log("digit pow:", digitPow)
-
-        sumDigitPow += digitPow
+        numPow.push(digit[i] ** p);
+        p++
     }
-    console.log("sum:", sumDigitPow)
+
+    // console.log(numPow)
+
+    let sum = numPow.reduce((a, b) => a + b, 0);
+    // console.log(sum);
 
     let k = 0;
-
-    if (sumDigitPow % n === 0) {
-        k = sumDigitPow / n;
+    if (sum % n === 0) {
+        k = sum / n
     } else {
         k = -1
     }
 
-    return k;
+    return k
 }
 
 console.log(digPow(89, 1)); //1
-console.log(digPow(92, 1)); //-1
+console.log(digPow(695, 2)); //2
 console.log(digPow(46288, 3)); //51
+console.log(digPow(46288, 5)); //-1

@@ -1,15 +1,23 @@
 function order(words) {
-    // ...
-    let word = words.split(" ");
-    let result = word[0]
-    //   console.log(word);
+    let char = words.split(" ");
+    // console.log(char)
+    for (let i = 0; i < char.length; i++) {
+        for (let j = 0; j < char.length - i - 1; j++) {
+            let num = char[j].match(/\d/);
+            let num1 = char[j + 1].match(/\d/);
 
-    word.sort((a, b) => {
-        return parseInt(a.match(/\d+/)[0]) - parseInt(b.match(/\d+/)[0])
-    })
-    return word.join(" ");
+            // console.log("#2:", num[0]);
+
+            if (num > num1) {
+                [char[j], char[j + 1]] = [char[j + 1], char[j]]
+            }
+        }
+    }
+    //   console.log(char)
+
+    return char.join(" ");
 }
 
-console.log(order("is2 Thi1s T4est 3a"));
-console.log(order("4of Fo1r pe6ople g3ood th5e the2"));
-console.log(order(""));
+console.log(order("is2 Thi1s T4est 3a")); //Thi1s is2 3a T4est
+console.log(order("4of Fo1r pe6ople g3ood th5e the2")); //Fo1r the2 g3ood 4of th5e pe6ople
+console.log(order("")); //""
