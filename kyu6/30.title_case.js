@@ -1,38 +1,28 @@
 function titleCase(title, minorWords) {
-    if (!title) {
-        return ""
-    }
+    if (!title) return "no string";
 
+    let words = title.toLowerCase().split(" ");
+    let minors = minorWords ? minorWords.toLowerCase().split(" ") : [];
+    result = []
 
-    let text = title.toLowerCase().split(" ");
-    let minor = minorWords ? minorWords.toLowerCase().split(" ") : []
-    let result = []
+    console.log(words)
+    console.log(minors)
 
-    console.log(text);
-    console.log(minor);
+    for (let i = 0; i < words.length; i++) {
+        // console.log(words[i]);
+        let word = words[i]
 
-    for (let i = 0; i < text.length; i++) {
-        // console.log(text[i])
-        let word = text[i]
-        let isMinor = false;
-
-        for (let j = 0; j < minor.length; j++) {
-            // console.log(minor[j])
-
-            if (word === minor[j]) {
-                isMinor = true;
-                break;
-            }
+        if (i === 0 || !minors.includes(word)) {
+            result.push(word[0].toUpperCase() + word.slice(1));
+        } else {
+            result.push(word)
         }
-
-        if (i === 0 || !isMinor) {
-            word = word[0].toUpperCase() + word.slice(1)
-        }
-        result.push(word)
     }
 
     return result.join(" ")
 }
 
 console.log(titleCase('a clash of KINGS', 'a an the of')) //'A Clash of Kings'
-console.log(titleCase('')) //'A Clash of Kings'
+console.log(titleCase('')) //no string
+console.log(titleCase('THE WIND IN THE WILLOWS', 'The In')); //The Wind in the Willows
+console.log(titleCase('the quick brown fox')); //The Quick Brown Fox
