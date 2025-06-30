@@ -22,6 +22,10 @@ function dirReduc(arr) {
     for (let i = 0; i < arr.length; i++) {
         let current = arr[i];
         let lastInStack = stack[stack.length - 1];
+        console.log("prev:", prevDirection)
+        console.log("stack:", stack)
+        console.log("opposite:", opposite[currentDirection])
+        console.log("")
 
         // Cek apakah current berlawanan dengan last
         if (opposite[current] === lastInStack) {
