@@ -19,6 +19,6 @@ function isSortedAndHow(array) {
     }
 }
 
-console.log(isSortedAndHow([1, 3, 9, 4]));
-console.log(isSortedAndHow([1, 2]));
-console.log(isSortedAndHow([4, 3, 2, 1]));
+console.log(isSortedAndHow([1, 3, 9, 4])); //no
+console.log(isSortedAndHow([1, 2])); //yes, ascending
+console.log(isSortedAndHow([4, 3, 2, 1])); //yes, desccending
