@@ -1,8 +1,6 @@
 var maxSequence = function (arr) {
     let maxSum = 0;
     for (let i = 0; i < arr.length; i++) {
-        //     currentSum = Math.max(arr[i], currentSum + arr[i]);
-        //     maxSum = Math.max(maxSum,currentSum)
         console.log("#1:", arr[i])
         let currentSum = 0;
         for (let j = i; j < arr.length; j++) {
