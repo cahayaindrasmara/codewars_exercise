@@ -17,6 +17,12 @@ function wave(str) {
             }
         }
 
+        /*
+        let chars = str.split("");
+        chars[i] = chars[i].toUpperCase();
+        wave.push(chars.join(""));
+        */
+
         wave.push(result)
     }
 
