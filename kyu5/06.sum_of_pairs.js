@@ -1,18 +1,21 @@
 function sumPairs(ints, s) {
-    // let earliestPair = null;
-    // let earliestIndex = ints.length;
+    // let minIndex = Infinity;
+    // let result = null;
 
     // for (let i = 0; i < ints.length; i++) {
-    //     for (let j = 0; j < ints.length; j++) {
-    //         if (ints[i] + ints[j] === s) {
-    //             if (j < earliestIndex) {
-    //                 earliestIndex = j;
-    //                 earliestPair = [ints[i], ints[j]];
+    //     console.log(ints[i]);
+
+    //     for (let j = i; j < ints.length; j++) {
+    //         console.log("inner loop:", ints[j]);
+
+    //         if (ints[i] + ints[j] === s && i !== j) {
+    //             if (j < minIndex) {
+    //                 result = [ints[i], ints[j]]
     //             }
     //         }
     //     }
     // }
-    // return earliestPair ?? undefined;
+    // return result;
 
     const seen = new Set();
 
@@ -23,6 +26,8 @@ function sumPairs(ints, s) {
         }
         seen.add(ints[i])
     }
+
+    return undefined
 }
 
 console.log(sumPairs([1, 4, 8, 7, 3, 15], 8)); //[1,7]
