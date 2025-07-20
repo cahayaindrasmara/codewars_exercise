@@ -11,7 +11,23 @@ function isPangram(string) {
     // return true;
 
     //kiss
-    return (string.match(/([a-z])(?!.*\1)/ig) || []).length === 26;
+    // return (string.match(/([a-z])(?!.*\1)/ig) || []).length === 26;
+
+    //another way
+    let alphabet = {}
+
+    for (let i = 0; i < string.length; i++) {
+        let char = string[i].toLowerCase();
+
+        if (/[a-zA-Z]/.test(char)) {
+            alphabet[char] = (alphabet[char] || 0) + 1;
+        }
+    }
+    // console.log(alphabet);
+
+    let totalAlphabet = Object.keys(alphabet).length;
+    return totalAlphabet === 26;
+
 }
 
 console.log(isPangram("The quick brown fox jumps over the lazy dog.")); //true
