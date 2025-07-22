@@ -20,3 +20,4 @@ function domainName(url) {
 }
 
 console.log(domainName("http://google.com")); //google
+console.log(domainName("www.xakep.ru")); //xakep
