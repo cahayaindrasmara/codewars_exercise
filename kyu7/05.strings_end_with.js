@@ -1,20 +1,5 @@
 function solution(str, ending) {
-    // str = "abcde"
-    // ending = "abc"
-
-    console.log(str.substring(str.length - ending.length))
-    // str length = 5
-    // ending length = 3
-
-    // str.substring(5 - 3) -> str.substring(2)
-    // hasil substring nya -> cde
-    if (str.substring(str.length - ending.length) === ending) {
-        // jika cde === ending ("cde") -> return true
-        return true;
-    } else {
-        // jika tidak return false
-        return false;
-    }
+    return ending === "" ? true : str.slice(-ending.length) === ending;
 
     // keep it simple stupid
     // return str.endsWith(ending)

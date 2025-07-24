@@ -1,10 +1,12 @@
 function arrayDiff(a, b) {
     let result = [];
+
     for (let i = 0; i < a.length; i++) {
-        // console.log("looping ke-1:", a[i])
+        console.log(a[i]);
         let found = false;
         for (let j = 0; j < b.length; j++) {
-            // console.log("looping ke-2:", b[j])
+            console.log("#2:", b[j]);
+
             if (a[i] === b[j]) {
                 found = true;
                 break;
@@ -15,7 +17,11 @@ function arrayDiff(a, b) {
             result.push(a[i])
         }
     }
+
     return result;
+
+    //kiss
+    //return a.filter(e => !b.includes(e));
 }
 
 console.log(arrayDiff([1, 2], [1])); //[2]
