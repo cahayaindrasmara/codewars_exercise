@@ -2,6 +2,7 @@
 function twoSum(numbers, target) {
     for (let i = 0; i < numbers.length; i++) {
         for (let j = 0; j < numbers.length; j++) {
+            // validasi jika i dan j harus beda index
             if (i !== j && numbers[i] + numbers[j] === target) {
                 return [i, j]
             }

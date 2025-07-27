@@ -6,15 +6,19 @@ function rot13(message) {
         // console.log(code)
 
         if (code >= 97 && code <= 122) {
-            result += String.fromCharCode(((code - 97 + 13) % 26) + 97)
+            result += String.fromCharCode((code - 97 + 13) % 26 + 97)
         } else if (code >= 65 && code <= 90) {
-            result += String.fromCharCode(((code - 65 + 13) % 26) + 65)
+            result += String.fromCharCode((code - 65 + 13) % 26 + 65)
         } else {
             result += message[i]
         }
     }
 
     return result;
+
+    //kiss
+
+    //const rot13 = str => str.replace(/[a-z]/gi, letter => String.fromCharCode(letter.charCodeAt(0) + (letter.toLowerCase() <= 'm' ? 13: -13)));
 }
 
 console.log(rot13("test")); //grfg

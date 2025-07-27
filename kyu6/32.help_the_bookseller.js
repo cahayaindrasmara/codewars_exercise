@@ -1,29 +1,28 @@
 function stockList(books, categories) {
-    let stock = {};
-    let list = [];
+    let stock = {}
+    let list = []
 
     for (let i = 0; i < categories.length; i++) {
-        // console.log("buku:", categories[i]);
+        // console.log(categories[i]);
 
         for (let j = 0; j < books.length; j++) {
-            // console.log("kategori:", books[j])
-            let idBook = books[j][0]
-            // console.log("id:", idBook)
-            let countBook = Number(books[j].split(" ")[1]);
-            // console.log("jumlah buku:", countBook)
+            // console.log("#2:", books[j]);
 
+            let code = books[j][0];
+            let qty = books[j].split(" ")[1];
 
-            // console.log(true)
-            // stock[categories[i]] = (stock[categories[i]] || 0) + countBook;
+            // console.log("code:", code, "qty:", qty);
 
-            if (categories[i] === idBook) {
-                stock[categories[i]] = (stock[categories[i]] || 0) + countBook;
+            if (categories[i] === code) {
+                stock[categories[i]] = (stock[categories[i]] || 0) + Number(qty);
             } else {
                 stock[categories[i]] = (stock[categories[i]] || 0);
             }
         }
     }
-    // console.log(stock)
+
+    // console.log(stock);
+
     for (let book in stock) {
         list.push(`(${book} : ${stock[book]})`)
     }
