@@ -1,19 +1,22 @@
-// function findOdd(A) {
-//     let countOdd = {};
+/*
+There will always be only one integer that appears an odd number of times.
+*/
+function findOdd(A) {
+    let countOdd = {};
 
-//     for (let i = 0; i < A.length; i++) {
-//         countOdd[A[i]] = (countOdd[A[i]] || 0) + 1;
-//     }
-//     console.log(countOdd)
+    for (let i = 0; i < A.length; i++) {
+        countOdd[A[i]] = (countOdd[A[i]] || 0) + 1;
+    }
+    console.log(countOdd)
 
-//     for (let count in countOdd) {
-//         if (countOdd[count] % 2 === 1) {
-//             return +count;
-//         }
-//     }
-// }
+    for (let count in countOdd) {
+        if (countOdd[count] % 2 === 1) {
+            return +count;
+        }
+    }
+}
 
-const findOdd = (xs) => xs.reduce((a, b) => a ^ b);
+// const findOdd = (xs) => xs.reduce((a, b) => a ^ b);
 // menggunakan operasi XOR
 /*
 Step-by-step reduce:
