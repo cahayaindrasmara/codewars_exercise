@@ -21,13 +21,13 @@ function sumPairs(ints, s) {
 
     for (let i = 0; i < ints.length; i++) {
         let needed = s - ints[i];
+
         if (seen.has(needed)) {
-            return [needed, ints[i]];
+            return [needed, ints[i]]
         }
+
         seen.add(ints[i])
     }
-
-    return undefined
 }
 
 console.log(sumPairs([1, 4, 8, 7, 3, 15], 8)); //[1,7]
