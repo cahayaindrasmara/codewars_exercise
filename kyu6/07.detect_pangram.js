@@ -14,19 +14,28 @@ function isPangram(string) {
     // return (string.match(/([a-z])(?!.*\1)/ig) || []).length === 26;
 
     //another way
-    let alphabet = {}
+    // let alphabet = {}
 
-    for (let i = 0; i < string.length; i++) {
-        let char = string[i].toLowerCase();
+    // for (let i = 0; i < string.length; i++) {
+    //     let char = string[i].toLowerCase();
 
-        if (/[a-zA-Z]/.test(char)) {
-            alphabet[char] = (alphabet[char] || 0) + 1;
-        }
-    }
-    // console.log(alphabet);
+    //     if (/[a-zA-Z]/.test(char)) {
+    //         alphabet[char] = (alphabet[char] || 0) + 1;
+    //     }
+    // }
+    // // console.log(alphabet);
 
-    let totalAlphabet = Object.keys(alphabet).length;
-    return totalAlphabet === 26;
+    // let totalAlphabet = Object.keys(alphabet).length;
+    // return totalAlphabet === 26;
+
+    // menggunakan set 
+    let pangram = new Set(
+        string.toLowerCase().match(/[a-z]/g)
+    )
+
+    console.log(pangram.size);
+
+    return pangram.size === 26;
 
 }
 
