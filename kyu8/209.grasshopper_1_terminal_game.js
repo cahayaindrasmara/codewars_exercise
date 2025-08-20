@@ -9,11 +9,11 @@ class Hero {
     }
 }
 
-let myHero = new Hero('')
+let myHero = new Hero()
 console.log(myHero.name);
 console.log(myHero.position);
 console.log(myHero.health);
 console.log(myHero.damage);
 console.log(myHero.experience);
 
-console.log(myHero.name);
+console.log(myHero.name); //"Hero"
