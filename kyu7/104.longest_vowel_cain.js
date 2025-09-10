@@ -5,7 +5,7 @@ function solve(s) {
     return Math.max(...arrLongest.map(item => item.length));
 }
 
-console.log(solve("codewarriors"));
-console.log(solve("suoidea"));
-console.log(solve("ultrarevolutionariees"));
-console.log(solve("strengthlessnesses"));
+console.log(solve("codewarriors")); //2
+console.log(solve("suoidea")); //3
+console.log(solve("ultrarevolutionariees")); //3
+console.log(solve("strengthlessnesses")); //1
