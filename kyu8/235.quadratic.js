@@ -1,5 +1,5 @@
 function quadratic(x1, x2) {
-    //   rumus = (x-x1) (x-x2)
+    //   rumus = (x-x1) (x-x2) = x^2, -x2x -x1x, -x1. -x2
     return [1, -(x1 + x2), x1 * x2]
 }
 
