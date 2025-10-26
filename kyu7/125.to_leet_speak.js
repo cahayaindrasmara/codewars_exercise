@@ -55,7 +55,7 @@ function toLeetSpeak(str) {
     return result;
 
     //kiss
-    //  return str.split('').map(char => alpha[char] || char).join('');
+    return str.split('').map(char => leet[char] || char).join('');
 
 }
 
